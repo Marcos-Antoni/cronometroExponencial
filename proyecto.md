@@ -71,3 +71,58 @@ El proyecto será estático, lo que facilita su despliegue gratuito y rápido.
     *   Despliegue automático en cada push a `main`.
 
 ## 6. Pasos para Iniciar
+
+1.  **Clonar el repositorio**
+    ```bash
+    git clone [URL_REPOSITORIO]
+    cd temporizadorExponencial
+    ```
+
+2.  **Instalar dependencias**
+    ```bash
+    npm install
+    ```
+
+3.  **Ejecutar en modo desarrollo**
+    ```bash
+    npm run dev
+    ```
+    La aplicación estará disponible en `http://localhost:5173`
+
+4.  **Ejecutar tests**
+    ```bash
+    npm test
+    ```
+
+5.  **Ejecutar linter**
+    ```bash
+    npm run lint
+    ```
+
+6.  **Construir para producción**
+    ```bash
+    npm run build
+    ```
+    Los archivos compilados estarán en la carpeta `dist/`
+
+7.  **Previsualizar build de producción**
+    ```bash
+    npm run preview
+    ```
+
+## 7. Estructura del Proyecto
+
+```
+temporizadorExponencial/
+├── src/
+│   ├── components/     # Componentes React reutilizables
+│   ├── pages/          # Páginas de la aplicación (Timer, Gráfico, Calculadora)
+│   ├── hooks/          # Custom hooks (useTimer, useLocalStorage)
+│   ├── utils/          # Funciones de utilidad (cálculos exponenciales, formateo)
+│   ├── test/           # Configuración de testing
+│   ├── App.tsx         # Componente principal con enrutamiento
+│   ├── main.tsx        # Punto de entrada
+│   └── index.css       # Estilos globales con Tailwind
+├── public/             # Archivos estáticos
+└── dist/               # Build de producción (generado)
+```

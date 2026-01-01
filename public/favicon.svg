@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Círculo del reloj en un tono ámbar/dorado elegante para que se note en fondos claros y oscuros -->
+  <circle cx="50" cy="50" r="45" fill="none" stroke="#F59E0B" stroke-width="5" />
+  
+  <!-- Marcas de horas -->
+  <line x1="50" y1="12" x2="50" y2="22" stroke="#F59E0B" stroke-width="4" stroke-linecap="round" />
+  <line x1="88" y1="50" x2="78" y2="50" stroke="#F59E0B" stroke-width="4" stroke-linecap="round" />
+  <line x1="50" y1="88" x2="50" y2="78" stroke="#F59E0B" stroke-width="4" stroke-linecap="round" />
+  <line x1="12" y1="50" x2="22" y2="50" stroke="#F59E0B" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Aguja de la hora -->
+  <line x1="50" y1="50" x2="50" y2="28" stroke="#F59E0B" stroke-width="5" stroke-linecap="round" />
+  
+  <!-- Aguja de los minutos (como curva exponencial sutil pero del mismo color) -->
+  <path d="M 50,50 Q 65,50 75,30" fill="none" stroke="#F59E0B" stroke-width="5" stroke-linecap="round" />
+  
+  <!-- Punto central -->
+  <circle cx="50" cy="50" r="4" fill="#F59E0B" />
+</svg>

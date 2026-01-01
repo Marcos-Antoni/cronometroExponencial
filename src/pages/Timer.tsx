@@ -1,4 +1,5 @@
 import { useExponentialTimer } from '../hooks/useExponentialTimer'
+import usePageTitle from '../hooks/usePageTitle'
 
 /**
  * Página principal del Temporizador Exponencial
@@ -9,6 +10,7 @@ import { useExponentialTimer } from '../hooks/useExponentialTimer'
  * Diseño: Premium, Moderno, Minimalista con micro-animaciones
  */
 export default function Timer() {
+  usePageTitle('Temporizador')
   const {
     currentFormatted,
     incrementNext,

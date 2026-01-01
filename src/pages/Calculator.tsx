@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react'
 import { useExponentialTimer } from '../hooks/useExponentialTimer'
+import usePageTitle from '../hooks/usePageTitle'
 import { validateTimeRange, secondsToHHMMSS } from '../utils/timeUtils'
 import { calculateSessionsToTarget } from '../utils/exponentialCalculations'
 
@@ -8,6 +9,7 @@ import { calculateSessionsToTarget } from '../utils/exponentialCalculations'
  * Rediseño Premium con inputs divididos para HH:MM:SS.
  */
 export default function Calculator() {
+  usePageTitle('Calculadora')
   const { currentSeconds } = useExponentialTimer()
 
   // Estados para los 3 inputs

@@ -14,6 +14,7 @@ import {
   type ChartData,
 } from 'chart.js'
 import { useExponentialTimer } from '../hooks/useExponentialTimer'
+import usePageTitle from '../hooks/usePageTitle'
 
 // Registrar componentes de Chart.js
 ChartJS.register(
@@ -31,6 +32,7 @@ ChartJS.register(
  * Página de visualización del progreso exponencial con diseño Premium.
  */
 export default function Progress() {
+  usePageTitle('Progreso')
   const {
     exponentialSequence,
     currentSeconds,

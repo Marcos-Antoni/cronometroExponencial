@@ -25,7 +25,7 @@ Este plan implementa una PWA de Temporizador Exponencial usando **metodología T
 Crear funciones de utilidad puras para conversiones de tiempo y formateo. Son la base de todas las demás fases.
 
 ### Tests a Escribir (TDD)
-**Archivo:** `src/utils/timeUtils.test.ts`
+**Archivo:** `tests/utils/timeUtils.test.ts`
 
 ```typescript
 describe('secondsToHHMMSS', () => {
@@ -86,7 +86,7 @@ Ninguna (fase inicial)
 Implementar algoritmos matemáticos críticos del temporizador exponencial.
 
 ### Tests a Escribir (TDD)
-**Archivo:** `src/utils/exponentialCalculations.test.ts`
+**Archivo:** `tests/utils/exponentialCalculations.test.ts`
 
 ```typescript
 describe('calculateNext', () => {
@@ -155,7 +155,7 @@ export function generateExponentialSequence(): number[]
 Crear capa de persistencia type-safe con validación automática.
 
 ### Tests a Escribir (TDD)
-**Archivo:** `src/utils/storage.test.ts`
+**Archivo:** `tests/utils/storage.test.ts`
 
 ```typescript
 describe('loadTimerValue', () => {
@@ -216,7 +216,7 @@ export function clearTimerValue(): void
 Centralizar toda la lógica del temporizador en un Custom Hook con auto-persistencia.
 
 ### Tests a Escribir (TDD)
-**Archivo:** `src/hooks/useExponentialTimer.test.ts`
+**Archivo:** `tests/hooks/useExponentialTimer.test.ts`
 
 ```typescript
 import { renderHook, act } from '@testing-library/react'
@@ -286,7 +286,7 @@ export function useExponentialTimer(): UseExponentialTimerReturn
 Crear UI principal del temporizador con diseño premium y controles.
 
 ### Tests a Escribir (TDD - Lógica UI, NO diseño)
-**Archivo:** `src/pages/Timer.test.tsx`
+**Archivo:** `tests/pages/Timer.test.tsx`
 
 ```typescript
 describe('Timer Page', () => {
@@ -354,7 +354,7 @@ export default function Timer() {
 Visualizar progreso en gráfica de línea con sincronización exacta.
 
 ### Tests a Escribir (TDD - Lógica, NO diseño)
-**Archivo:** `src/pages/Progress.test.tsx`
+**Archivo:** `tests/pages/Progress.test.tsx`
 
 ```typescript
 describe('Progress Page', () => {
@@ -439,7 +439,7 @@ export default function Progress() {
 Calcular sesiones faltantes/pasadas hacia tiempo objetivo.
 
 ### Tests a Escribir (TDD)
-**Archivo:** `src/pages/Calculator.test.tsx`
+**Archivo:** `tests/pages/Calculator.test.tsx`
 
 ```typescript
 describe('Calculator Page', () => {
@@ -521,7 +521,7 @@ export default function Calculator() {
 Conectar las 3 páginas con react-router-dom y navegación global.
 
 ### Tests a Escribir (TDD)
-**Archivo:** `src/App.test.tsx`
+**Archivo:** `tests/App.test.tsx`
 
 ```typescript
 import { render, screen } from '@testing-library/react'
@@ -626,31 +626,37 @@ export default function Navigation() {
 ```
 src/
 ├── components/
-│   ├── Navigation.tsx
-│   └── Navigation.test.tsx (opcional, tests básicos)
+│   └── Navigation.tsx
 ├── hooks/
-│   ├── useExponentialTimer.ts
-│   └── useExponentialTimer.test.ts
+│   └── useExponentialTimer.ts
 ├── pages/
 │   ├── Timer.tsx
-│   ├── Timer.test.tsx
 │   ├── Progress.tsx
-│   ├── Progress.test.tsx
-│   ├── Calculator.tsx
-│   └── Calculator.test.tsx
+│   └── Calculator.tsx
 ├── utils/
 │   ├── timeUtils.ts
-│   ├── timeUtils.test.ts
 │   ├── exponentialCalculations.ts
-│   ├── exponentialCalculations.test.ts
-│   ├── storage.ts
-│   └── storage.test.ts
+│   └── storage.ts
 ├── test/
 │   └── setup.ts (YA EXISTE)
 ├── App.tsx
-├── App.test.tsx
 ├── main.tsx
 └── index.css
+
+tests/
+├── components/
+│   └── Navigation.test.tsx
+├── hooks/
+│   └── useExponentialTimer.test.ts
+├── pages/
+│   ├── Timer.test.tsx
+│   ├── Progress.test.tsx
+│   └── Calculator.test.tsx
+├── utils/
+│   ├── timeUtils.test.ts
+│   ├── exponentialCalculations.test.ts
+│   └── storage.test.ts
+└── App.test.tsx
 ```
 
 ---

@@ -8,7 +8,7 @@ describe('Calculator Page', () => {
     localStorage.clear()
   })
 
-  const fillTime = async (user: any, h: string, m: string, s: string) => {
+  const fillTime = async (user: ReturnType<typeof userEvent.setup>, h: string, m: string, s: string) => {
     const hInput = screen.getByLabelText(/horas/i)
     const mInput = screen.getByLabelText(/minutos/i)
     const sInput = screen.getByLabelText(/segundos/i)
